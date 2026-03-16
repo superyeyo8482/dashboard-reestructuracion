@@ -16,6 +16,23 @@
             <p class="text-gray-500 mt-2">Socios: YEYO - CARMEN - MAYER | Corte actualizado al 12/03/2026</p>
         </header>
 
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
+            <div class="flex-1">
+                <h2 class="text-lg font-bold text-blue-900 mb-2">Nota Descriptiva del Ejercicio</h2>
+                <p class="text-sm text-blue-800 leading-relaxed">
+                    El ajuste se realizó mediante una inyección de capital cruzada. Se tomó el 50% de la utilidad del proyecto de plantas potabilizadoras ($106,465.00) y se abonó directamente a la deuda de CAPUFE. Esto redujo el impacto de la pérdida para cada socio de $165,000.00 a $129,511.67, liberando flujo de efectivo y mejorando la utilidad neta final de cada uno.
+                </p>
+            </div>
+            <div class="flex-shrink-0">
+                <a href="estrategia-de-cobro.pdf" download="estrategia-de-cobro.pdf" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 shadow transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Estrategia de Cobro
+                </a>
+            </div>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Deuda Restante Iván</h3>
@@ -30,9 +47,9 @@
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 ring-2 ring-blue-500">
-                <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Saldo Pendiente a Pagar a Yeyo</h3>
+                <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Liquidación Pendiente de Utilidad</h3>
                 <p class="text-3xl font-bold text-blue-700 mt-2">$35,488.33</p>
-                <p class="text-xs text-gray-500 mt-1">Para liquidar la utilidad ajustada</p>
+                <p class="text-xs text-gray-500 mt-1">Saldo a favor tras la reestructuración</p>
             </div>
         </div>
 
@@ -82,14 +99,14 @@
                     {
                         label: 'Escenario Original',
                         data: [165000, 35537.44],
-                        backgroundColor: 'rgba(239, 68, 68, 0.5)', // Red
+                        backgroundColor: 'rgba(239, 68, 68, 0.5)', 
                         borderColor: 'rgb(239, 68, 68)',
                         borderWidth: 1
                     },
                     {
                         label: 'Con Propuesta (Plantas)',
                         data: [129511.67, 71025.77],
-                        backgroundColor: 'rgba(34, 197, 94, 0.6)', // Green
+                        backgroundColor: 'rgba(34, 197, 94, 0.6)', 
                         borderColor: 'rgb(34, 197, 94)',
                         borderWidth: 1
                     }
