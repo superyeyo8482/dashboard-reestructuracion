@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+      <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,84 +8,92 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800 p-6 md:p-10">
+<body class="bg-gray-50 font-sans text-gray-800 p-4 md:p-10">
 
     <div class="max-w-6xl mx-auto space-y-8">
         
         <header class="bg-white shadow-sm rounded-xl p-6 border-l-4 border-blue-600">
-            <h1 class="text-3xl font-bold text-gray-900">Propuesta de Ajuste y Compensación de Pérdidas</h1>
-            <p class="text-gray-500 mt-2">Socios: YEYO - CARMEN - MAYER | Corte actualizado al 12/03/2026</p>
+            <h1 class="text-3xl font-bold text-gray-900 uppercase tracking-tight">Propuesta de Ajuste y Compensación de Pérdidas</h1>
+            <p class="text-gray-500 mt-2 font-medium">SOCIOS: AURELIO ROBLES | CARMEN RAMOS | MAYER RAMOS</p>
+            <p class="text-xs text-gray-400 uppercase">Metepec, Estado de México | Corte: 16/03/2026</p>
         </header>
 
-        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
-            <div class="flex-1">
-                <h2 class="text-lg font-bold text-blue-900 mb-2">Nota Descriptiva del Ejercicio</h2>
-                <p class="text-sm text-blue-800 leading-relaxed">
-                    El ajuste se realizó mediante una inyección de capital cruzada. Se tomó el 50% de la utilidad del proyecto de plantas potabilizadoras ($106,465.00) y se abonó directamente a la deuda de CAPUFE. Esto redujo el impacto de la pérdida para cada socio de $165,000.00 a $129,511.67, liberando flujo de efectivo y mejorando la utilidad neta final de cada uno.
-                </p>
-            </div>
-            <div class="flex-shrink-0">
-                <a href="estrategia-de-cobro.pdf" download="estrategia-de-cobro.pdf" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 shadow transition-colors">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg>
-                    Estrategia de Cobro
-                </a>
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-sm">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+                <div class="flex-1">
+                    <h2 class="text-lg font-bold text-blue-900 mb-2 uppercase tracking-wide">Nota Descriptiva del Ejercicio</h2>
+                    <p class="text-sm text-blue-800 leading-relaxed mb-4">
+                        El ajuste se realizó mediante una inyección de capital cruzada. Se tomó el 50% de la utilidad del proyecto de plantas potabilizadoras ($106,465.00) y se abonó directamente a la deuda de CAPUFE. Esto redujo el impacto de la pérdida para cada socio de $165,000.00 a $129,511.67, liberando flujo de efectivo y mejorando la utilidad neta final de cada uno.
+                    </p>
+                    <div class="p-3 bg-white/50 rounded-lg border border-blue-100">
+                        <p class="text-xs text-blue-700">
+                            <strong>Sustento Legal:</strong> Propuestas diseñadas para <strong>Alfonso Ivan Salgado Robles</strong> bajo el Código Civil Federal (Arts. 1794, 1832 y 2080). Incluye plan de pagos a 48 meses y opción de liquidación por solvencia.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-full lg:w-auto">
+                    <a href="estrategia-de-cobro.pdf" download="estrategia-de-cobro.pdf" class="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-sm font-black rounded-xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl transition-all transform hover:scale-105 uppercase tracking-tighter">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        Descargar Estrategia de Cobro (PDF)
+                    </a>
+                </div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Deuda Restante Iván</h3>
-                <p class="text-3xl font-bold text-red-600 mt-2">$365,488.33</p>
-                <p class="text-xs text-gray-400 mt-1">Aplicando el 50% de plantas potabilizadoras</p>
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Deuda Restante Iván</h3>
+                <p class="text-3xl font-extrabold text-red-600 mt-2">$365,488.33</p>
+                <p class="text-[10px] text-gray-400 mt-1 uppercase font-semibold italic">Aplicando 50% utilidad plantas</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Utilidad Final Ajustada (Por Socio)</h3>
-                <p class="text-3xl font-bold text-green-600 mt-2">$71,025.77</p>
-                <p class="text-xs text-gray-400 mt-1">Mejora significativa vs. escenario inicial</p>
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Utilidad Final Ajustada</h3>
+                <p class="text-3xl font-extrabold text-green-600 mt-2">$71,025.77</p>
+                <p class="text-[10px] text-gray-400 mt-1 uppercase font-semibold italic">Monto neto proyectado por socio</p>
             </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 ring-2 ring-blue-500">
-                <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Liquidación Pendiente de Utilidad</h3>
-                <p class="text-3xl font-bold text-blue-700 mt-2">$35,488.33</p>
-                <p class="text-xs text-gray-500 mt-1">Saldo a favor tras la reestructuración</p>
+            <div class="bg-blue-600 p-6 rounded-xl shadow-lg border-b-4 border-blue-800">
+                <h3 class="text-xs font-bold text-blue-100 uppercase tracking-widest text-opacity-80">Liquidación Pendiente de Utilidad</h3>
+                <p class="text-3xl font-extrabold text-white mt-2">$35,488.33</p>
+                <p class="text-[10px] text-blue-100 mt-1 uppercase font-semibold italic">Saldo a favor tras reestructuración</p>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h2 class="text-xl font-bold mb-4">Impacto de la Propuesta por Socio</h2>
+                <h2 class="text-lg font-bold mb-4 uppercase text-gray-700 tracking-tight">Análisis Comparativo de Escenarios</h2>
                 <canvas id="impactoChart" width="400" height="250"></canvas>
             </div>
 
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h2 class="text-xl font-bold mb-4">Lógica de la Reestructuración</h2>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-0.5 mr-3">Original</span>
+                <h2 class="text-lg font-bold mb-6 uppercase text-gray-700 tracking-tight">Mecánica Financiera</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-red-500 text-white text-[10px] font-black px-2 py-1 rounded mr-4">ANTERIOR</div>
                         <div>
-                            <p class="font-semibold">Absorción total de la deuda</p>
-                            <p class="text-sm text-gray-600">Cada socio absorbía $165,000.00 de pérdida. Total a compensar: $495,000.00.</p>
+                            <p class="font-bold text-gray-800">Absorción Directa de Pérdida</p>
+                            <p class="text-sm text-gray-500 mt-1">Cada socio absorbía $165,000.00 de pérdida total.</p>
                         </div>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-0.5 mr-3">Rescate</span>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded mr-4">AJUSTE</div>
                         <div>
-                            <p class="font-semibold">Inyección de Utilidad (Plantas)</p>
-                            <p class="text-sm text-gray-600">Se inyecta el 50% de la utilidad de plantas de luz y potabilizadoras ($106,465.00) directo a la deuda de CAPUFE.</p>
+                            <p class="font-bold text-gray-800">Inyección de Utilidad Externa</p>
+                            <p class="text-sm text-gray-500 mt-1">Se compensa con $106,465.00 de utilidad de plantas potabilizadoras.</p>
                         </div>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded mt-0.5 mr-3">Nuevo</span>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded mr-4">RESULTADO</div>
                         <div>
-                            <p class="font-semibold">Compensación Ajustada</p>
-                            <p class="text-sm text-gray-600">El golpe por socio baja a $129,511.67, liberando capital para pagar los saldos pendientes a los socios.</p>
+                            <p class="font-bold text-gray-800">Optimización de Utilidad</p>
+                            <p class="text-sm text-gray-500 mt-1">El impacto negativo baja a $129,511.67, incrementando el remanente disponible.</p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -94,20 +103,20 @@
         const impactoChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Pérdida Absorbida (Golpe)', 'Utilidad Neta Final'],
+                labels: ['Pérdida Absorbida', 'Utilidad Neta'],
                 datasets: [
                     {
-                        label: 'Escenario Original',
+                        label: 'Sin Ajuste',
                         data: [165000, 35537.44],
-                        backgroundColor: 'rgba(239, 68, 68, 0.5)', 
+                        backgroundColor: 'rgba(239, 68, 68, 0.4)', 
                         borderColor: 'rgb(239, 68, 68)',
                         borderWidth: 1
                     },
                     {
-                        label: 'Con Propuesta (Plantas)',
+                        label: 'Propuesta Actual',
                         data: [129511.67, 71025.77],
-                        backgroundColor: 'rgba(34, 197, 94, 0.6)', 
-                        borderColor: 'rgb(34, 197, 94)',
+                        backgroundColor: 'rgba(37, 99, 235, 0.7)', 
+                        borderColor: 'rgb(37, 99, 235)',
                         borderWidth: 1
                     }
                 ]
@@ -117,27 +126,7 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-                        ticks: {
-                            callback: function(value) {
-                                return '$' + value.toLocaleString();
-                            }
-                        }
-                    }
-                },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                let label = context.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                if (context.parsed.y !== null) {
-                                    label += new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(context.parsed.y);
-                                }
-                                return label;
-                            }
-                        }
+                        ticks: { callback: (v) => '$' + v.toLocaleString() }
                     }
                 }
             }
