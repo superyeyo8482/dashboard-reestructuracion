@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Reestructuración Financiera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 p-6 md:p-10">
+
+    <div class="max-w-6xl mx-auto space-y-8">
+        
+        <header class="bg-white shadow-sm rounded-xl p-6 border-l-4 border-blue-600">
+            <h1 class="text-3xl font-bold text-gray-900">Propuesta de Ajuste y Compensación de Pérdidas</h1>
+            <p class="text-gray-500 mt-2">Socios: YEYO - CARMEN - MAYER | Corte actualizado al 12/03/2026</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Deuda Restante Iván</h3>
+                <p class="text-3xl font-bold text-red-600 mt-2">$365,488.33</p>
+                <p class="text-xs text-gray-400 mt-1">Aplicando el 50% de plantas potabilizadoras</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Utilidad Final Ajustada (Por Socio)</h3>
+                <p class="text-3xl font-bold text-green-600 mt-2">$71,025.77</p>
+                <p class="text-xs text-gray-400 mt-1">Mejora significativa vs. escenario inicial</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 ring-2 ring-blue-500">
+                <h3 class="text-sm font-semibold text-blue-600 uppercase tracking-wider">Saldo Pendiente a Pagar a Yeyo</h3>
+                <p class="text-3xl font-bold text-blue-700 mt-2">$35,488.33</p>
+                <p class="text-xs text-gray-500 mt-1">Para liquidar la utilidad ajustada</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold mb-4">Impacto de la Propuesta por Socio</h2>
+                <canvas id="impactoChart" width="400" height="250"></canvas>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h2 class="text-xl font-bold mb-4">Lógica de la Reestructuración</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded mt-0.5 mr-3">Original</span>
+                        <div>
+                            <p class="font-semibold">Absorción total de la deuda</p>
+                            <p class="text-sm text-gray-600">Cada socio absorbía $165,000.00 de pérdida. Total a compensar: $495,000.00.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded mt-0.5 mr-3">Rescate</span>
+                        <div>
+                            <p class="font-semibold">Inyección de Utilidad (Plantas)</p>
+                            <p class="text-sm text-gray-600">Se inyecta el 50% de la utilidad de plantas de luz y potabilizadoras ($106,465.00) directo a la deuda de CAPUFE.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded mt-0.5 mr-3">Nuevo</span>
+                        <div>
+                            <p class="font-semibold">Compensación Ajustada</p>
+                            <p class="text-sm text-gray-600">El golpe por socio baja a $129,511.67, liberando capital para pagar los saldos pendientes a los socios.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('impactoChart').getContext('2d');
+        const impactoChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Pérdida Absorbida (Golpe)', 'Utilidad Neta Final'],
+                datasets: [
+                    {
+                        label: 'Escenario Original',
+                        data: [165000, 35537.44],
+                        backgroundColor: 'rgba(239, 68, 68, 0.5)', // Red
+                        borderColor: 'rgb(239, 68, 68)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Con Propuesta (Plantas)',
+                        data: [129511.67, 71025.77],
+                        backgroundColor: 'rgba(34, 197, 94, 0.6)', // Green
+                        borderColor: 'rgb(34, 197, 94)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
