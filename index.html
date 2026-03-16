@@ -1,10 +1,9 @@
-
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Reestructuración Financiera</title>
+    <title>Dashboard Financiero - Aurelio Robles</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -13,26 +12,29 @@
     <div class="max-w-6xl mx-auto space-y-8">
         
         <header class="bg-white shadow-sm rounded-xl p-6 border-l-4 border-blue-600">
-            <h1 class="text-3xl font-bold text-gray-900 uppercase tracking-tight">Propuesta de Ajuste y Compensación de Pérdidas</h1>
-            <p class="text-gray-500 mt-2 font-medium">SOCIOS: AURELIO ROBLES | CARMEN RAMOS | MAYER RAMOS</p>
-            <p class="text-xs text-gray-400 uppercase">Metepec, Estado de México | Corte: 16/03/2026</p>
+            <h1 class="text-3xl font-bold text-gray-900 uppercase tracking-tight leading-tight">Propuesta de Ajuste y Compensación de Pérdidas</h1>
+            <div class="mt-4 space-y-1">
+                <p class="text-sm font-black text-blue-700 uppercase tracking-widest">Titular: Aurelio Robles Pichardo</p>
+                <p class="text-xs text-gray-500 font-medium uppercase">Socios: Carmen Ramos Flores | Angel Enrique Mayer Ramos</p>
+                <p class="text-[10px] text-gray-400 uppercase mt-2">Metepec, Estado de México | 16 de Marzo, 2026</p>
+            </div>
         </header>
 
         <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-sm">
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
                 <div class="flex-1">
-                    <h2 class="text-lg font-bold text-blue-900 mb-2 uppercase tracking-wide">Nota Descriptiva del Ejercicio</h2>
+                    <h2 class="text-lg font-bold text-blue-900 mb-2 uppercase">Nota Descriptiva del Ejercicio</h2>
                     <p class="text-sm text-blue-800 leading-relaxed mb-4">
-                        El ajuste se realizó mediante una inyección de capital cruzada. Se tomó el 50% de la utilidad del proyecto de plantas potabilizadoras ($106,465.00) y se abonó directamente a la deuda de CAPUFE. Esto redujo el impacto de la pérdida para cada socio de $165,000.00 a $129,511.67, liberando flujo de efectivo y mejorando la utilidad neta final de cada uno.
+                        Ajuste mediante inyección de capital cruzada ($106,465.00) proveniente del proyecto de plantas potabilizadoras. Este movimiento reduce la pérdida individual por socio a $129,511.67, optimizando el flujo de caja y asegurando una liquidación neta positiva.
                     </p>
                     <div class="p-3 bg-white/50 rounded-lg border border-blue-100">
                         <p class="text-xs text-blue-700">
-                            <strong>Sustento Legal:</strong> Propuestas diseñadas para <strong>Alfonso Ivan Salgado Robles</strong> bajo el Código Civil Federal (Arts. 1794, 1832 y 2080). Incluye plan de pagos a 48 meses y opción de liquidación por solvencia.
+                            <strong>Documentación Legal:</strong> El PDF incluye los contratos para <strong>Alfonso Ivan Salgado Robles</strong> basados en el Código Civil Federal (Plan de 48 meses y Reconocimiento Simple).
                         </p>
                     </div>
                 </div>
                 <div class="flex-shrink-0 w-full lg:w-auto">
-                    <a href="estrategia-de-cobro.pdf" download="estrategia-de-cobro.pdf" class="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-sm font-black rounded-xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl transition-all transform hover:scale-105 uppercase tracking-tighter">
+                    <a href="estrategia-de-cobro.pdf" download="estrategia-de-cobro.pdf" class="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-sm font-black rounded-xl text-white bg-blue-600 hover:bg-blue-700 shadow-xl transition-all transform hover:scale-105 uppercase">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                         </svg>
@@ -46,61 +48,48 @@
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Deuda Restante Iván</h3>
                 <p class="text-3xl font-extrabold text-red-600 mt-2">$365,488.33</p>
-                <p class="text-[10px] text-gray-400 mt-1 uppercase font-semibold italic">Aplicando 50% utilidad plantas</p>
             </div>
             
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Utilidad Final Ajustada</h3>
                 <p class="text-3xl font-extrabold text-green-600 mt-2">$71,025.77</p>
-                <p class="text-[10px] text-gray-400 mt-1 uppercase font-semibold italic">Monto neto proyectado por socio</p>
             </div>
 
             <div class="bg-blue-600 p-6 rounded-xl shadow-lg border-b-4 border-blue-800">
-                <h3 class="text-xs font-bold text-blue-100 uppercase tracking-widest text-opacity-80">Liquidación Pendiente de Utilidad</h3>
+                <h3 class="text-xs font-bold text-blue-100 uppercase tracking-widest">Liquidación Pendiente</h3>
                 <p class="text-3xl font-extrabold text-white mt-2">$35,488.33</p>
-                <p class="text-[10px] text-blue-100 mt-1 uppercase font-semibold italic">Saldo a favor tras reestructuración</p>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h2 class="text-lg font-bold mb-4 uppercase text-gray-700 tracking-tight">Análisis Comparativo de Escenarios</h2>
+                <h2 class="text-lg font-bold mb-4 uppercase text-gray-700">Impacto en la Utilidad</h2>
                 <canvas id="impactoChart" width="400" height="250"></canvas>
             </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h2 class="text-lg font-bold mb-6 uppercase text-gray-700 tracking-tight">Mecánica Financiera</h2>
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="bg-red-500 text-white text-[10px] font-black px-2 py-1 rounded mr-4">ANTERIOR</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Absorción Directa de Pérdida</p>
-                            <p class="text-sm text-gray-500 mt-1">Cada socio absorbía $165,000.00 de pérdida total.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded mr-4">AJUSTE</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Inyección de Utilidad Externa</p>
-                            <p class="text-sm text-gray-500 mt-1">Se compensa con $106,465.00 de utilidad de plantas potabilizadoras.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-green-500 text-white text-[10px] font-black px-2 py-1 rounded mr-4">RESULTADO</div>
-                        <div>
-                            <p class="font-bold text-gray-800">Optimización de Utilidad</p>
-                            <p class="text-sm text-gray-500 mt-1">El impacto negativo baja a $129,511.67, incrementando el remanente disponible.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-center">
+                <h2 class="text-lg font-bold mb-6 uppercase text-gray-700 italic">Resumen de Gestión</h2>
+                <ul class="space-y-4 text-sm text-gray-600 font-medium">
+                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span> Formalización de adeudo histórico.</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span> Blindaje legal mediante Código Civil Federal.</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span> Transparencia total entre socios.</li>
+                </ul>
             </div>
         </div>
+
+        <footer class="mt-16 pt-8 border-t border-gray-200 pb-12 text-center">
+            <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4 font-bold">Documentación Elaborada y Validada por</p>
+            <div class="inline-block px-8 py-4 bg-gray-50 rounded-2xl border border-gray-100">
+                <p class="text-2xl font-black text-gray-900 uppercase tracking-tighter">Aurelio Robles Pichardo</p>
+                <p class="text-xs text-blue-600 font-bold uppercase tracking-[0.2em] mt-1">Estrategia y Gestión Legal</p>
+            </div>
+        </footer>
+
     </div>
 
     <script>
         const ctx = document.getElementById('impactoChart').getContext('2d');
-        const impactoChart = new Chart(ctx, {
+        new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['Pérdida Absorbida', 'Utilidad Neta'],
@@ -113,7 +102,7 @@
                         borderWidth: 1
                     },
                     {
-                        label: 'Propuesta Actual',
+                        label: 'Propuesta Aurelio',
                         data: [129511.67, 71025.77],
                         backgroundColor: 'rgba(37, 99, 235, 0.7)', 
                         borderColor: 'rgb(37, 99, 235)',
